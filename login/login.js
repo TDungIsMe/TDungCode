@@ -128,7 +128,7 @@ loginForm.onsubmit = function (event) {
     passwordError.innerHTML = ''
   }
   const existingUser = userList.find(function (user) {
-    return user.username === username.value &&
+    return user.username === username.value 
   }) 
   if (username.value !== 'trung' || password.value !== '123456') {
     loginError.innerHTML = 'Sai Tên đăng nhập hoặc Mật khẩu'
@@ -136,4 +136,9 @@ loginForm.onsubmit = function (event) {
     loginError.innerHTML = ''
     window.location.href = '../index.html'
   }
+}
+
+for (let index = 0; index < array.length; index++) {
+  const element = array[index];
+  
 }
