@@ -4,7 +4,7 @@ const products = [
         name: "Iphone 15 128GB",
         desc: "",
         price: 21490000,
-        img: '/images/product1.jbg',
+        img: '/images/product1.jpg',
     },
     {
         id : 2,
