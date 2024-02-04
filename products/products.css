@@ -4,6 +4,8 @@
     /* margin: 10px; */
     border-radius: 8px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
   }
   
   .product-img {
@@ -31,6 +33,7 @@
   .product-prices {
     color: gray;
     font-size: 14px;
+    margin-top: auto;
   }
   
   .product-prices s {

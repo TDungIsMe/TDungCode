@@ -1,6 +1,22 @@
 import products from '../data/products.js'
 import formatCurrency from '../utils/formatCurrency.js'
 
+// XU LY NGUOI DUNG NAV
+function getUsers() {
+    const user = JSON.parse(localStorage.getItem('user'))
+    return user
+}
+
+function disPlayOnNavbar() {
+    const loginBlock = document.getElementById(login-block)
+    const notloginBlock = document.getElementById(not-login-block)
+
+    const user = getUsers()
+    if (user) {
+        loginBlock.classList
+      }
+}
+
 
 function renderProducts(products) {
     const productlist = document.getElementById('product-list')
@@ -32,11 +48,17 @@ function renderProducts(products) {
         productPrices.classList.add('product-prices')
         productPrices.appendChild(newPrice)
     
+      const addToCartBtn = document.createElement('button')
+      addToCartBtn.innerHTML = "Them vao gio hang"
+      addToCartBtn.classList.add('btn',"btn-primary",'w-100','mt-3')
+
         const productTag = document.createElement('div')
         productTag.classList.add('product')
         productTag.appendChild(productImageLink)
         productTag.appendChild(productName)
         productTag.appendChild(productPrices)
+        productTag.appendChild(addToCartBtn)
+
     
         const productWrapper = document.createElement('div')
         productWrapper.classList.add('col-12','col-sm-6','col-md-4','col-lg-3','p-3')
@@ -52,7 +74,7 @@ renderProducts(products)
 
 // Tìm kiếm sản phẩm 
 const searchInput = document.getElementById('Search-Input')
-searchInput.onchange = function (event) {
+searchInput.oninput = function (event) {
     const text = event.target.value
     console.log(text);
     searchProducts(text)
@@ -73,4 +95,12 @@ function searchProducts(text) {
     }
 }
 
+const navbarSearchForm = document.getElementById('navbar-search-form')
+const navbarSearchInput = document.getElementById('navbar-search')
+
+navbarSearchForm.onsubmit = function (event) {
+  event.preventDefault()
+  const text = navbarSearchInput.value
+  searchProducts(text)
+}
 
