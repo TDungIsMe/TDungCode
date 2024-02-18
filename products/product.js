@@ -1,5 +1,11 @@
 import products from '../data/products.js'
 import formatCurrency from '../utils/formatCurrency.js'
+import getUser from '../helper/getuser.js'
+import displayCartQuantity from '../helper/displayCartQuantity.js'
+
+displayCartQuantity()
+
+
 
 // XU LY NGUOI DUNG NAV
 function getUsers() {
@@ -7,15 +13,6 @@ function getUsers() {
     return user
 }
 
-function disPlayOnNavbar() {
-    const loginBlock = document.getElementById(login-block)
-    const notloginBlock = document.getElementById(not-login-block)
-
-    const user = getUsers()
-    if (user) {
-        loginBlock.classList
-      }
-}
 
 
 function renderProducts(products) {
@@ -48,9 +45,17 @@ function renderProducts(products) {
         productPrices.classList.add('product-prices')
         productPrices.appendChild(newPrice)
     
+   
+
+
       const addToCartBtn = document.createElement('button')
       addToCartBtn.innerHTML = "Them vao gio hang"
       addToCartBtn.classList.add('btn',"btn-primary",'w-100','mt-3')
+
+      addToCartBtn.onclick = function () {
+        addToCart(product)
+        
+      }
 
         const productTag = document.createElement('div')
         productTag.classList.add('product')
@@ -102,5 +107,49 @@ navbarSearchForm.onsubmit = function (event) {
   event.preventDefault()
   const text = navbarSearchInput.value
   searchProducts(text)
+}
+
+// Xu li them san pham vao gio hang
+function addToCart(product) {
+    const userList = JSON.parse(localStorage.getItem('userList'))
+
+const currentUser = getUser()
+        if (!currentUser) { 
+            alert('Can dang nhap de mua hang')
+            window.location.href = '/login'
+        }else {
+            const userWithCart = userList.find(function (u) {
+                return u.username === currentUser.username
+            })
+           const userIndex = userList.indexOf(userWithCart)
+
+           const cart = userWithCart.cart || []
+
+           const cartItem = cart.find(function (item) {
+            return item.product.id === product.id
+           })
+
+           if (cartItem) {
+            const itemIndex = cart.indexOf(cartItem)
+            cartItem.quantity++
+
+            cart[itemIndex] = cartItem
+           }else{
+            const newItem = {
+                product: product,
+                quantity: 1,
+
+            }
+            cart.unshift(newItem)
+           }
+
+
+           userWithCart.cart = cart
+           userList[userIndex] = userWithCart
+
+
+           localStorage.setItem('userList',JSON.stringify(userList))
+        }
+    console.log(product);
 }
 
