@@ -1,0 +1,219 @@
+.nav {
+    background-color:rgba(0,124,232,1.00) ; 
+    display: flex;
+    border-radius: 5px;
+
+}
+.nav a:hover {
+   color: black;
+}
+.nav-items{
+    color:whitesmoke;
+    text-decoration: none;
+    padding:10px;
+}
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+h3 {
+    color:rgba(0,124,232,1.00) ;
+    font-size: 22px;
+}
+.Login_bar {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    
+}
+.Login_bar_item {
+    margin-top: 1%;
+    margin-right:1%;
+    color:rgba(0,124,232,1.00)
+}
+#Login_bar_button {
+    color:white;
+    background-color:rgba(0,124,232,1.00) ;
+    border-color:rgb(0, 136, 255) ;
+    border-radius:5px;
+
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    margin-top: 1%;
+
+}
+img{
+    border-radius: 5%;
+}
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 25px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+/* Number text (1/7 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }  
+
+
+
+  /* MAIN */
+.Main_tittle {
+    margin-top:50px;
+    text-align:center;
+    font: 300px;;
+}
+.Main_trai_nghiem{
+    max-width: 100%;
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.img_trai_nghiem {
+    width:20%;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-right: 10px;
+  
+}
+.img_trai_nghiem div{
+  margin-top: 20px;
+}
+.Main_trai_nghiem button {
+ margin-bottom: 20px;
+ text-align:center;
+}
+
+
+
+/* footer */
+.footer {
+  border-radius:2px;
+  width: 100%;
+  position: relative;
+  height: auto;
+  background-color:black;
+}
+.footer .footer_inf {
+  width: 190px;
+  height: auto;
+  float: left;
+  padding: 0px 20px 20px 20px;
+}
+.footer .footer_inf h1 {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 22px;
+  line-height: 17px;
+  padding: 20px 0px 5px 0px;
+  color:rgb(77, 77, 77)
+}
+.footer .footer_inf ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.footer  ul li {
+  color:gray;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: bold;
+  padding: 5px 0px 5px 0px;
+  cursor: pointer;
+}
+.footer .Footer_social h1 {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 22px;
+  line-height: 17px;
+  padding: 20px 0px 5px 0px;
+  color:rgb(77, 77, 77)
+}
+.Footer_social ul li {
+  display: block;
+  padding-right: 5px !important;
+  
+}
+
+.footer ul li:hover {
+  color: #ffffff;
+}
+.clearfix {
+  clear: both;
+}

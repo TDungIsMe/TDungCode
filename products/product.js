@@ -1,9 +1,9 @@
 import products from '../data/products.js'
 import formatCurrency from '../utils/formatCurrency.js'
 import getUser from '../helper/getuser.js'
-import displayCartQuantity from '../helper/displayCartQuantity.js'
+// import displayCartQuantity from '../helper/displayCartQuantity.js'
 
-displayCartQuantity()
+// displayCartQuantity()
 
 
 
@@ -109,47 +109,4 @@ navbarSearchForm.onsubmit = function (event) {
   searchProducts(text)
 }
 
-// Xu li them san pham vao gio hang
-function addToCart(product) {
-    const userList = JSON.parse(localStorage.getItem('userList'))
-
-const currentUser = getUser()
-        if (!currentUser) { 
-            alert('Can dang nhap de mua hang')
-            window.location.href = '/login'
-        }else {
-            const userWithCart = userList.find(function (u) {
-                return u.username === currentUser.username
-            })
-           const userIndex = userList.indexOf(userWithCart)
-
-           const cart = userWithCart.cart || []
-
-           const cartItem = cart.find(function (item) {
-            return item.product.id === product.id
-           })
-
-           if (cartItem) {
-            const itemIndex = cart.indexOf(cartItem)
-            cartItem.quantity++
-
-            cart[itemIndex] = cartItem
-           }else{
-            const newItem = {
-                product: product,
-                quantity: 1,
-
-            }
-            cart.unshift(newItem)
-           }
-
-
-           userWithCart.cart = cart
-           userList[userIndex] = userWithCart
-
-
-           localStorage.setItem('userList',JSON.stringify(userList))
-        }
-    console.log(product);
-}
 

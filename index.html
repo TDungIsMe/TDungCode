@@ -1,53 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./main.css">
+  <title>Document</title>
 </head>
+
 <body>
+
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./products">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-            
-
-            </div>
-          </div>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">TRANG CHỦ </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./products">SẢM PHẨM</a>
+            </li>
+            <li class="nav-item">
+            </li>
+            <li class="nav-item dropdown">
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
         </div>
-      </nav>
+      </div>
+    </nav>
+    
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+          <div class="numbertext">1 / 7</div>
+          <img class="slide_img" src="./images/product1.jpg" style="width:50%">
+          <div class="text"></div>
+      </div>
+     
+      <div class="mySlides fade">
+          <div class="numbertext">2 / 7</div>
+          <img class="slide_img" src="./images/product10.jpg" style="width:50%">
+          <div class="text"></div>
+      </div>
+     
+      <div class="mySlides fade">
+          <div class="numbertext">3 / 7</div>
+          <img class="slide_img" src="./images/product3.jpg" style="width:50%">
+          <div class="text"></div>
+      </div>
+      <div class="mySlides fade">
+          <div class="numbertext">4 / 7</div>
+          <img class="slide_img" src="./images/product4.jpg" style="width:50%">
+          <div class="text"></div>
+      </div>
+      <div class="mySlides fade">
+         <div class="numbertext">5 / 7</div>
+         <img class="slide_img" src="./images/product6.jpg" style="width:50%">
+         <div class="text"></div>
+      </div>
+      <div class="mySlides fade">
+         <div class="numbertext">6 / 7</div>
+         <img class="slide_img" src="./images/product9.jpg" style="width:50%">
+         <div class="text"></div>
+      </div>
+      <div class="mySlides fade">
+         <div class="numbertext">7 / 7</div>
+         <img class="slide_img"src="" style="width:50%">
+         <div class="text"></div>
+      </div>
+     
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+     
+ </div>
+     <br>
+     
+     <div style="text-align:center">
+       <span class="dot" onclick="currentSlide(1)"></span> 
+       <span class="dot" onclick="currentSlide(2)"></span> 
+       <span class="dot" onclick="currentSlide(3)"></span> 
+       <span class="dot" onclick="currentSlide(4)"></span> 
+       <span class="dot" onclick="currentSlide(5)"></span> 
+       <span class="dot" onclick="currentSlide(6)"></span> 
+       <span class="dot" onclick="currentSlide(7)"></span> 
+     </div>
 
 
- <script src="./app.js" type="module"></script>
+    <div class="footer">
+      <div class="contain">
+      <div class="footer_inf">
+          <h1>Product</h1>
+          <ul>
+              <li>Thông Tin</li>
+              <li>TruyềnThông</li>
+              <li>Liên Hệ</li>
+          </ul>
+      </div>
+      <div class="footer_inf">
+           <h1>Information</h1>
+          <ul>
+          <li>Liên Hệ</li>
+          <li>Khác</li>
+          </ul>
+      </div>
+      <div class="footer_inf">
+          <h1>Account</h1>
+          <ul>
+              <li>Thông Tin</li>
+              <li>Đăng Ký</li>
+              <li>Hướng dẫn</li>
+          </ul>
+      </div>
+      <div class="footer_inf">
+          <h1>Contact</h1>
+          <ul>
+              <li>gmail</li>
+              <li>Liên hệ</li>
+          </ul>
+      </div>
+      <div class="footer_inf">
+           <h1>Support</h1>
+          <ul>
+              <li>Liên hệ</li>
+              <li>Gmail</li>
+          </ul>
+   </div>
+   <div class="Footer_social">
+     <h1>Social</h1>
+     <ul>
+       <li>Facebook</li>
+       <li>Instagram</li>
+     </ul>
+   </div>
+      </div>
+  <div class="clearfix"></div>
+    </div>
+    <script src="./app.js" type="module"></script>
 </body>
+
 </html>

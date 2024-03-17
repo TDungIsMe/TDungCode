@@ -11,37 +11,15 @@
 <body> 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="../">Navbar</a>
+          <a class="navbar-brand" href="../">TRANG CHỦ</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="">Home</a>
+                <a class="nav-link active" aria-current="page" href="">SẢN PHẨM</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
-            <form id="navbar-search-form" class="d-flex" role="search">
-              <input id="navbar-search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
             <!-- Da Dang Nhap -->
             <div class="ms-3" id="login-block">
               <i></i>
@@ -56,9 +34,10 @@
             <a type="button" class="btn btn-sm position-relative" href="/cart">
               <i class="fa-solid fa-cart-shopping"></i>
               <span
-                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              id="cart-quantity" 
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
               >
-                9
+                0
               </span>
             </a>
           </div>
@@ -88,6 +67,60 @@
         </div>
       </div>
 
+      <!-- footer section start -->
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <a href="index.html"><img src="../images/Apple_logo_black.svg.png" alt="" class="img-fluid logo-footer"></a>
+       <div class="footer-about">
+          <p> </p>
+        </div>
+
+      </div>
+      <div class="col-md-3">
+        <div class="useful-link">
+          <h2>Hữu ích</h2>
+          <img src="./assets/images/about/home_line.png" alt="" class="img-fluid">
+          <div class="use-links">
+            <li><a href="index.html"><i class="fa-solid fa-angles-right"></i> Trang chủ </a></li>
+            <li><a href="about.html"><i class="fa-solid fa-angles-right"></i> Liên quan</a></li>
+            <li><a href="gallery.html"><i class="fa-solid fa-angles-right"></i> Sản phẩm</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-angles-right"></i> Liên lạc</a></li>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-3">
+        <div class="social-links">
+          <h2>Theo dõi</h2>
+          <img src="./assets/images/about/home_line.png" alt="">
+          <div class="social-icons">
+            <li><a href="https://www.facebook.com/profile.php?id=100054524657529"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+            <li><a href="https://www.instagram.com/c.qtdung/"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-3">
+        <div class="address">
+          <h2>Địa chỉ</h2>
+          <img src="./assets/images/about/home_line.png" alt="" class="img-fluid">
+          <div class="address-links">
+            <li class="address1"><i class="fa-solid fa-location-dot"></i> Q.BT Tp HCM
+            </li>
+            <li><a href=""><i class="fa-solid fa-phone"></i>345678910</a></li>
+            <li><a href=""><i class="fa-solid fa-envelope"></i> tridung@gmail.com</a></li>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</footer>
+<!-- footer section end -->
+<!-- footer copy right section start -->
 
  <script src="./product.js" type = "module"></script>
 </body>
